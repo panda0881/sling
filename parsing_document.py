@@ -11,7 +11,7 @@ for test_sentence in test_sentences:
     # tmp_output = tmp_out.stdout.decode('utf-8')
     # print('current output', tmp_output)
     print('tmp_out:', tmp_out)
-    tmp_output = tmp_out.decode('utf-8').replace(' \n', '')
+    tmp_output = tmp_out.decode('utf-8').replace(' \n', '').replace(' ', '')
     print('tmp_output:', tmp_output)
     current_result = json.loads(tmp_output)
     result.append(current_result)

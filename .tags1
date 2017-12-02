@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+RemoveAnnotations	/home/qiaobaochen/Documents/sling/nlp/parser/tools/parsedocument.cc	/^Document *RemoveAnnotations(Document *document) {$/;"	function	line:65	signature:(Document *document)
+ParserEvaulationCorpus	/home/qiaobaochen/Documents/sling/nlp/parser/tools/parsedocument.cc	/^class ParserEvaulationCorpus : public ParallelCorpus {$/;"	class	line:81	file:
+ParserEvaulationCorpus	/home/qiaobaochen/Documents/sling/nlp/parser/tools/parsedocument.cc	/^  ParserEvaulationCorpus(Store *commons, const Parser *parser,$/;"	function	line:83	class:ParserEvaulationCorpus	signature:(Store *commons, const Parser *parser, const string &eval_corpus_filename)
+commons_	/home/qiaobaochen/Documents/sling/nlp/parser/tools/parsedocument.cc	/^  Store *commons_;           \/\/ commons store$/;"	member	line:124	class:ParserEvaulationCorpus	file:
+parser_	/home/qiaobaochen/Documents/sling/nlp/parser/tools/parsedocument.cc	/^  const Parser *parser_;     \/\/ parser being evaluated$/;"	member	line:125	class:ParserEvaulationCorpus	file:
+corpus_	/home/qiaobaochen/Documents/sling/nlp/parser/tools/parsedocument.cc	/^  DocumentSource *corpus_;   \/\/ evaulation corpus with golden annotations$/;"	member	line:126	class:ParserEvaulationCorpus	file:
+num_documents_	/home/qiaobaochen/Documents/sling/nlp/parser/tools/parsedocument.cc	/^  int num_documents_ = 0;    \/\/ number of documents processed$/;"	member	line:127	class:ParserEvaulationCorpus	file:
+main	/home/qiaobaochen/Documents/sling/nlp/parser/tools/parsedocument.cc	/^int main(int argc, char *argv[]) {$/;"	function	line:130	signature:(int argc, char *argv[])

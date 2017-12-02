@@ -176,7 +176,7 @@ int main(int argc, char *argv[]) {
 
     //Outputfile
     std::ofstream parse_result;
-    parse_result.open('output.txt');
+    parse_result.open("output.txt");
 
     //Readfile
     std::ifstream inputFile(FLAGS_text);

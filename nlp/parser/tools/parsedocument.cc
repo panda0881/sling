@@ -181,22 +181,23 @@ int main(int argc, char *argv[]) {
     //Readfile
     std::ifstream inputFile(FLAGS_text);
     std::string single_sentence;
+    clock.start();
+    std::int total_token = 0;
     while (std::getline(inputFile, single_sentence)){
 
       // Parse sentence.
       tokenizer.Tokenize(&document, single_sentence);
-      clock.start();
+
       parser.Parse(&document);
       document.Update();
-      clock.stop();
-
       //Write result to output file
       parse_result << ToText(document.top(), FLAGS_indent) << "\n";
       parse_result << "Seperate_sentence\n";
-      LOG(INFO) << document.num_tokens() / clock.secs() << " tokens/sec";
+      total_token += document.num_tokens()
     }
-
+    clock.stop();
     parse_result.close();
+    LOG(INFO) << document.num_tokens() / clock.secs() << " tokens/sec";
   }
 
 

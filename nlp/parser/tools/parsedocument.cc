@@ -193,7 +193,7 @@ int main(int argc, char *argv[]) {
       //Write result to output file
       parse_result << ToText(document.top(), FLAGS_indent) << "\n";
       parse_result << "Seperate_sentence\n";
-      total_token += document.num_tokens()
+      total_token += document.num_tokens();
     }
     clock.stop();
     parse_result.close();

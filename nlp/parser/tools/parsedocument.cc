@@ -182,7 +182,7 @@ int main(int argc, char *argv[]) {
     std::ifstream inputFile(FLAGS_text);
     std::string single_sentence;
     clock.start();
-    std::int total_token = 0;
+    int total_token = 0;
     while (std::getline(inputFile, single_sentence)){
 
       // Parse sentence.

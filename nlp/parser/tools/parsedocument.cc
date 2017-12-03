@@ -197,7 +197,7 @@ int main(int argc, char *argv[]) {
     }
     clock.stop();
     parse_result.close();
-    LOG(INFO) << document.num_tokens() / clock.secs() << " tokens/sec";
+    LOG(INFO) << total_token / clock.secs() << " tokens/sec";
   }
 
 

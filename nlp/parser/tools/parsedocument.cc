@@ -171,8 +171,7 @@ int main(int argc, char *argv[]) {
     DocumentTokenizer tokenizer;
 
     // Create document
-    Store store(&commons);
-    Document document(&store);
+
 
     //Outputfile
     std::ofstream parse_result;
@@ -184,7 +183,8 @@ int main(int argc, char *argv[]) {
     clock.start();
     int total_token = 0;
     while (std::getline(inputFile, single_sentence)){
-
+      Store store(&commons);
+      Document document(&store);
       // Parse sentence.
       tokenizer.Tokenize(&document, single_sentence);
 

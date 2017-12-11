@@ -175,13 +175,16 @@ int main(int argc, char *argv[]) {
 
     //Outputfile
     std::ofstream parse_result;
-    parse_result.open("output.txt");
+    std::string outputfile_name = "output";
+    outputfile_name = outputfile_name + FLAGS_text.substr(22);
+    parse_result.open(outputfile_name);
 
     //Readfile
     std::ifstream inputFile(FLAGS_text);
     std::string single_sentence;
     clock.start();
     int total_token = 0;
+    int total_sentence = 0;
     while (std::getline(inputFile, single_sentence)){
       Store store(&commons);
       Document document(&store);
@@ -194,10 +197,12 @@ int main(int argc, char *argv[]) {
       parse_result << ToText(document.top(), FLAGS_indent) << "\n";
       parse_result << "Seperate_sentence\n";
       total_token += document.num_tokens();
+      total_sentence += 1;
     }
     clock.stop();
     parse_result.close();
     LOG(INFO) << total_token / clock.secs() << " tokens/sec";
+    LOG(INFO) << total_sentence / clock.secs() << " sentences/sec";
   }
 
 
